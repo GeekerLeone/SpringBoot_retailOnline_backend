@@ -17,8 +17,13 @@ public class ProductService {
 	ProductDao productDao;
 	
 	public Response registerProduct(Product product) {
-		System.out.println(product);
-		productDao.save(product);
+		if (productDao.findByProductname(product.getName()) != null) {
+			updateProduct(product);
+		} else {
+			System.out.println(product);
+			productDao.save(product);
+		}
+		
 		return new Response(true);
 	}
 	

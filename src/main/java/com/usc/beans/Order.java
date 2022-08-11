@@ -62,6 +62,7 @@ public class Order {
 		this.purchase_date = purchase_date;
 		this.purchases = purchases;
 	}
+	
 
 	public int getId() {
 		return id;

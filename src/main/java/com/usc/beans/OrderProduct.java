@@ -41,6 +41,12 @@ public class OrderProduct {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public OrderProduct(int qty, Product product) {
+		super();
+		this.qty = qty;
+		this.product = product;
+	}
 	@Override
 	public String toString() {
 		return "OrderProduct [id=" + id + ", qty=" + qty + ", order=" + order + ", product=" + product + "]";
